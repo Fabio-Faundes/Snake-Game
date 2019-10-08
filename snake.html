@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <link href="snake.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">        
+    </head>
+    <body>       
+        <div class="container text-center">
+            <canvas id="canvas" width="740" height="740"></canvas>
+            <p>Press start and eat the pizza!</p>
+            <button class="btn" style="background-color: cadetblue;" id="btnStart" onclick="startGame()">START</button>
+            <label id="aaaa"></label>
+        </div>
+        
+        <script>            
+            document.addEventListener("DOMContentLoaded", aa());
+            
+            function aa () {
+                var canvas = document.getElementById("canvas");
+                var context = canvas.getContext("2d");
+                
+                context.fillStyle = "red";
+                context.fillRect(0,0,740,740);                 
+                
+                context.strokeStyle = "blue";
+                context.strokeRect(0,0,740,740);
+                
+                context.strokeStyle = "black";
+                context.fillStyle = "rgb(255,255,255)";
+                                
+                context.fillRect(20,20,700,700);
+                context.strokeRect(20,20,700,700);
+            }  
+                        
+        </script>
+        <script src="snakeGame.js">            
+        </script>
+    </body>
+</html>
